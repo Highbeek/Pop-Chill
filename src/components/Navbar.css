@@ -1,0 +1,32 @@
+/* font-family: 'Oldenburg', cursive;
+font-family: 'Reem Kufi', sans-serif; */
+
+.link {
+  color: #e59500;
+}
+.active {
+  color: #840032;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 80px;
+    font-family: 'Benne', serif;
+
+}
+a{
+    text-decoration: none;
+    color: var(--textColor);
+    font-size: 16px;
+    font-weight: 600;
+
+}
+a:first-child{
+    font-size: 32px;
+    font-weight: bold;
+
+}

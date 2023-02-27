@@ -1,0 +1,9 @@
+.footer{
+    background-color:  #002642;
+    padding: 0 auto;
+    height: 50vh;
+    border-top: 1px solid  #e59500;
+}
+.footer h1{
+    color: #e59500 ;
+}
