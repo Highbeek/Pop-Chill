@@ -4,29 +4,47 @@ font-family: 'Reem Kufi', sans-serif; */
 .link {
   color: #e59500;
 }
-.active {
-  color: #840032;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 80px;
+  font-family: "Benne", serif;
+  padding: 20px;
+  height: 100px;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  background: #eae2b7;
+  z-index: 9999;
+}
+a.link {
+  text-decoration: none;
+  color: var(--textColor);
+  font-size: 24px;
+  font-weight: 600;
+}
+a.link:first-child {
+  font-size: 42px;
+  font-weight: bold;
+  font-family: "Oldenburg", cursive;
 }
 
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    text-decoration: none;
-    margin-bottom: 80px;
-    font-family: 'Benne', serif;
-
+a.link.active {
+  position: relative;
+  
 }
-a{
-    text-decoration: none;
-    color: var(--textColor);
-    font-size: 16px;
-    font-weight: 600;
-
-}
-a:first-child{
-    font-size: 32px;
-    font-weight: bold;
-
+a.link.active::after {
+  content: "";
+  float: left;
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  transform: translateX(-50%);
+  width: 50%;
+  border-bottom: 2px solid #840032;
+   transition: all 0.5s ease-in-out;
+ 
 }

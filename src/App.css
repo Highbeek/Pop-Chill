@@ -4,16 +4,29 @@
   padding: 0;
   box-sizing: border-box;
 }
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 .App {
   text-align: center;
 }
-body{
+body {
   font-size: 16px;
   background-color: var(--mainColor);
-  max-width: 1280px;
+  max-width: 100%;
+  color: var(--textColor);
+  margin: 0 ;
+  padding:0 ;
 }
+
 :root {
   --mainColor: #002642;
   --secondaryColor: #840032;
   --textColor: #e59500;
+  --lighTextColor:#eae2b7;
+  --textHeader: #f77f00;
+ 
+
 }

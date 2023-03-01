@@ -9,7 +9,7 @@ const BackgroundVideo = () => {
   useEffect(() => {
     const fetchVideoIds = async () => {
       const response = await fetch(
-        `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&type=video&q=action+movie+trailer&videoEmbeddable=true&key=AIzaSyD9P2eUPFSaOkvG-YcV7Q7BTot3o-UYKeI`
+        `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&type=video&q=action+movie+trailer&videoEmbeddable=true&key=${process.env.REACT_APP_API_KEY}`
       );
       const data = await response.json();
       const ids = data.items.map((item) => item.id.videoId);
@@ -58,5 +58,3 @@ const BackgroundVideo = () => {
 };
 
 export default BackgroundVideo;
-
-

@@ -10,8 +10,7 @@ const Navbar = () => {
         to="/"
         className={({ isActive }) => (isActive ? "link active" : "link")}
       >
-        Pop <BiCameraMovie />
-        Chill
+        Pop<BiCameraMovie />Chill
       </NavLink>
       <NavLink to="/action" className="link">
         Action{" "}
