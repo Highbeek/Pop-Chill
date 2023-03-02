@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from "react";
-import './MovieList.css'
+import React, { useState, useEffect, useRef } from "react";
+import "./MovieList.css";
 import ReactPlayer from "react-player";
-import ReactDOMServer from 'react-dom/server'
+import ReactDOMServer from "react-dom/server";
 
-const MovieList = () => {
+const MovieList = ({ genreId }) => {
   const [movies, setMovies] = useState([]);
   const [hoverIndex, setHoverIndex] = useState(null);
+  const playerRef = useRef(null);
 
   useEffect(() => {
     const apiKey = "c2fd65c8e84371772739b79b6c4cba09";
-    const apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`;
+    const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${genreId}`;
 
     fetch(apiUrl)
       .then((response) => response.json())
@@ -21,7 +22,7 @@ const MovieList = () => {
         }));
         setMovies(movies);
       });
-  }, []);
+  }, [genreId]);
 
   const handleMouseEnter = (index) => {
     setHoverIndex(index);
@@ -30,20 +31,22 @@ const MovieList = () => {
   const handleMouseLeave = () => {
     setHoverIndex(-1);
   };
+const handlePlayClick = (trailerUrl) => {
+  const windowName = "movieTrailer";
+  const windowFeatures =
+    "width=800,height=600,resizable,scrollbars=yes,status=1";
+  const videoUrl = `https://www.youtube.com/watch?v=${trailerUrl}`;
+  const player = <ReactPlayer url={videoUrl} playing={true} controls={true} />;
+  const newWindow = window.open("", windowName, windowFeatures);
+  const newDocument = newWindow.document;
+  newDocument.body.innerHTML = ReactDOMServer.renderToString(player);
+  newDocument.querySelector("a").setAttribute("target", "_blank");
+  newDocument.querySelector("a").setAttribute("rel", "noopener noreferrer");
+};
 
- const handlePlayClick = (trailerUrl) => {
-   const windowFeatures =
-     "width=800,height=600,resizable,scrollbars=yes,status=1";
-   const videoUrl = `https://www.youtube.com/watch?v=${trailerUrl}`;
-   const player = <ReactPlayer url={videoUrl} playing={true} controls={true} />;
-   const newWindow = window.open("", "", windowFeatures);
-   newWindow.document.body.innerHTML = ReactDOMServer.renderToString(player);
- };
-  
 
   return (
     <div className="movie-list">
-      <h2>Recent Movies</h2>
       <ul className="movie-grid">
         {movies.map((movie, index) => (
           <li
@@ -53,11 +56,10 @@ const MovieList = () => {
             className={hoverIndex === index ? "hover" : ""}
           >
             <img src={movie.imageUrl} alt={movie.title} />
-            {/* <h3>{movie.title}</h3> */}
             {hoverIndex === index && (
-              <button onClick={() => handlePlayClick(movie.trailerUrl)}>
-                {/* <FiPlay /> */}
-              </button>
+              <button
+                onClick={() => handlePlayClick(movie.trailerUrl)}
+              ></button>
             )}
           </li>
         ))}

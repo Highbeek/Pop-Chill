@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
-import {BiCameraMovie} from 'react-icons/bi'
+import { BiCameraMovie } from "react-icons/bi";
 
 const Navbar = () => {
   return (
@@ -10,7 +10,9 @@ const Navbar = () => {
         to="/"
         className={({ isActive }) => (isActive ? "link active" : "link")}
       >
-        Pop<BiCameraMovie />Chill
+        Pop
+        <BiCameraMovie />
+        Chill
       </NavLink>
       <NavLink to="/action" className="link">
         Action{" "}
@@ -24,8 +26,8 @@ const Navbar = () => {
         Romance
       </NavLink>
 
-      <NavLink to="/anime" className="link">
-        Anime
+      <NavLink to="/animation" className="link">
+        Animation
       </NavLink>
     </section>
   );

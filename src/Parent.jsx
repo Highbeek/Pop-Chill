@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Action from "./pages/Action";
-import Anime from "./pages/Anime";
+import Animation from "./pages/Animation";
 import Comedy from "./pages/Comedy";
 import Error from "./pages/Error";
 import Home from "./pages/Home";
@@ -17,7 +17,7 @@ function Parent() {
             <Route path="action" element={<Action />} />
             <Route path="/comedy" element={<Comedy />} />
             <Route path="/romance" element={<Romance />} />
-            <Route path="/anime" element={<Anime />} />
+            <Route path="/animation" element={<Animation />} />
             <Route path="*" element={<Error />} />
           </Route>
         </Routes>

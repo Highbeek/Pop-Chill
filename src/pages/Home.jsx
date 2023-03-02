@@ -4,10 +4,11 @@ import MovieList from "../components/MovieList";
 
 const Home = () => {
   return (
-   <>
-  <BackgroundVideo/>
-  <MovieList/>
-   </>
+    <>
+      <BackgroundVideo />
+      <h2>Recent Movies</h2>
+      <MovieList />
+    </>
   );
 };
 

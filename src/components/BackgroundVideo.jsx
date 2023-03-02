@@ -45,12 +45,14 @@ const BackgroundVideo = () => {
         <h1> Pop & Chill</h1>
         <p>
           Pop & Chill Official Website, your no 1 stop for the best sites for
-          watching movies online for free. We offer full access to a database of
-          more than 20,000 films and 5,000 high quality TV series for free
-          viewing without registration. Fmovies is updated with new content
-          daily and our huge database makes it easy to find all of your favorite
-          movies and shows. Please support us by sharing fmovies site with your
-          friends and family. Thanks!
+          watching movies online for free.If you're looking for the latest and
+          greatest films, then you're in the right place. We have a wide
+          selection of movies that have just hit the theaters or have been
+          recently released on streaming platforms. Whether you're in the mood
+          for blockbuster action, award-winning dramas, or indie gems, we've got
+          you covered. So stay up-to-date with the latest trends and check out
+          our selection of recent movies below. You never know, you might
+          discover your new favorite film!
         </p>
       </div>
     </section>
