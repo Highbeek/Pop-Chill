@@ -32,3 +32,33 @@
   color: #f77f00;
   font-size: 5rem;
 }
+
+@media screen and (max-width: 768px) {
+  
+.hero__poster img {
+  height: 50vh;
+  object-fit: cover;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.hero__head {
+  position: absolute;
+  display: block;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color:  #e59500;
+  z-index: 1;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.hero__head h1 {
+  color: #f77f00;
+  font-size: 3rem;
+}
+
+
+
+}

@@ -12,8 +12,8 @@ const Footer = () => {
             <h4>Pop & Chill</h4>
           </a>
           <p>
-            Pop & chill is a free streaming site 2023, where you can watch
-            movies online for free, no registration required. Pop&Chill.cc
+            Pop & chill is a free streaming Trailer site for 2023, where you can watch
+            movies best movie trailers  for free.
             Pop&Chill.cc Contact us Terms of service
           </p>
         </div>

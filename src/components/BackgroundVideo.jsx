@@ -9,12 +9,15 @@ const BackgroundVideo = () => {
   useEffect(() => {
     const fetchVideoIds = async () => {
       const response = await fetch(
-        `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&type=video&q=action+movie+trailer&videoEmbeddable=true&key=${process.env.REACT_APP_API_KEY}`
+        `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&type=video&q=action+movie+trailer&videoEmbeddable=true&key=AIzaSyD9P2eUPFSaOkvG-YcV7Q7BTot3o-UYKeI`
       );
       const data = await response.json();
-      const ids = data.items.map((item) => item.id.videoId);
-      setVideoIds(ids);
+      if (data.items) {
+        const ids = data.items.map((item) => item.id.videoId);
+        setVideoIds(ids);
+      }
     };
+
     fetchVideoIds();
   }, []);
 
@@ -25,21 +28,28 @@ const BackgroundVideo = () => {
   return (
     <section className="hero">
       <div className="background-video">
-        <ReactPlayer
-          url={`https://www.youtube.com/watch?v=${videoIds[videoIndex]}`}
-          playing={true}
-          loop={true}
-          muted={true}
-          controls={false}
-          width="100%"
-          height="100%"
-          onEnded={handleVideoEnd}
-          onClick={null}
-          style={{
-            pointerEvents: "none",
-            transform: "scale(1.5)" /* Scale the video by 10% */,
-          }}
-        />
+        {videoIds.length > 0 && (
+          <ReactPlayer
+            url={`https://www.youtube.com/watch?v=${videoIds[videoIndex]}`}
+            playing={true}
+            loop={true}
+            muted={true}
+            controls={false}
+            width="100%"
+            height="100%"
+            onEnded={handleVideoEnd}
+            onClick={null}
+            style={{
+              pointerEvents: "none",
+              transform: "scale(1.5)" /* Scale the video by 10% */,
+            }}
+            onPlay={() =>
+              console.log(
+                `Video URL: https://www.youtube.com/watch?v=${videoIds[videoIndex]}`
+              )
+            }
+          />
+        )}
       </div>
       <div className="home__hero">
         <h1> Pop & Chill</h1>
