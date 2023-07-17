@@ -14,7 +14,7 @@ function Parent() {
         <Routes>
           <Route path="/" element={<SharedLayout />}>
             <Route index element={<Home />} />
-            <Route path="action" element={<Action />} />
+            <Route path="/action" element={<Action />} />
             <Route path="/comedy" element={<Comedy />} />
             <Route path="/romance" element={<Romance />} />
             <Route path="/animation" element={<Animation />} />

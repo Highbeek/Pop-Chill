@@ -147,14 +147,11 @@ h2 {
     margin-left: 30px;
   }
   h2 {
-  color: #e59500;
-  padding-top: 50px;
-  text-align: center;
-  margin-bottom: 20px;
+    color: #e59500;
+    padding-top: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  @media screen and (max-width: 420px) {
+  }
 }
-@media screen and (max-width: 420px){
-  
-}
-  
-}
-

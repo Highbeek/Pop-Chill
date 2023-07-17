@@ -36,20 +36,21 @@ a.link {
 
 a.link.active {
   position: relative;
-  font-style: italic; /* add font-style property */
+  font-style: italic; 
+  color: #840032;
 }
 
-a.link.active::after {
+/* a.link.active::after {
   content: "";
   float: left;
   position: absolute;
   bottom: 0;
-  left: 30%;
+  left: 50%;
   transform: translateX(-50%);
-  width: 50%;
+  width: 40%;
   border-bottom: 2px solid #840032;
   transition: all 0.5s ease-in-out;
-}
+} */
 
 .navbar__links {
   width: 60%;
