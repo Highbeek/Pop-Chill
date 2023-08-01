@@ -40,6 +40,7 @@
     width: 100%;
     padding: 0;
     margin: 0;
+    aspect-ratio: 1;
   }
   .hero__head {
     top: 40%;
@@ -55,5 +56,4 @@
     font-size: 3rem;
     left: 0;
   }
-  
 }

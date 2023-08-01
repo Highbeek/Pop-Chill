@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { BiCameraMovie } from "react-icons/bi";
 import { GoThreeBars } from "react-icons/go";
+import { AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -22,8 +23,9 @@ const Navbar = () => {
         Chill
       </NavLink>
       <button className="menu-btn" onClick={toggleMenu}>
-        <GoThreeBars />
+        {showMenu ? <AiOutlineClose /> : <GoThreeBars />}
       </button>
+
       <div className={`navbar__links ${showMenu ? "show-menu" : ""}`}>
         <NavLink to="/action" className="link">
           Action{" "}
