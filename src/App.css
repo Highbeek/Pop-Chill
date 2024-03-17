@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Benne&family=Oldenburg&family=Reem+Kufi:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.App {
+  text-align: center;
+}
+body {
+  font-size: 16px;
+  background-color: var(--mainColor);
+  max-width: 100%;
+  color: var(--textColor);
+  margin: 0 ;
+  padding:0 ;
+}
+
+:root {
+  --mainColor: #002642;
+  --secondaryColor: #840032;
+  --textColor: #e59500;
+  --lighTextColor:#eae2b7;
+  --textHeader: #f77f00;
+ 
+
+}

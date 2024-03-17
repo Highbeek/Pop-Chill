@@ -1,0 +1,177 @@
+h2 {
+  color: #e59500;
+  padding: 10px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.movie-poster {
+  position: relative;
+}
+
+.play-button {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.movie-poster:hover .play-button {
+  display: block;
+}
+
+.movie-list {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  margin: 0;
+  align-items: "center";
+}
+
+.movie-grid li {
+  list-style: none;
+  text-align: center;
+  color: #e59500;
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  padding-bottom: 150%;
+}
+
+.movie-grid img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 100px;
+  width: auto;
+  object-fit: cover;
+  height: 60vh;
+  position: relative;
+}
+
+.play-button-icon {
+  width: 80px;
+  height: 80px;
+  background-image: url("../Assets/play.png");
+  background-size: cover;
+  border-radius: 50%;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.movie-grid li.hover::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.movie-grid li.hover:hover .play-button-icon {
+  display: flex;
+}
+
+.movie-grid li:hover::after:hover {
+  opacity: 0.7;
+}
+
+.movie-grid h3 {
+  margin-top: 10px;
+}
+
+.movie-grid button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #002642;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.movie-grid button:hover {
+  opacity: 0.7;
+}
+
+.movie-grid li.hover::after:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.movie-grid button svg {
+  width: 40px;
+  height: 40px;
+  fill: #002642;
+}
+
+@media screen and (max-width: 1000px) {
+  .movie-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    object-fit: contain;
+    /* margin-left: 30px; */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .movie-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    object-fit: contain;
+     margin-left: 20px;
+    margin-right: 20px;
+    /* margin-left: 30px; */
+  }
+
+  h2 {
+    color: #e59500;
+    padding-top: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 498px) {
+  .movie-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    object-fit: cover;
+    margin-left: 20px;
+    margin-right: 20px;
+    /* margin-left: 30px; */
+  }
+}
