@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import SyncLoader from "react-spinners/SyncLoader";
 
 function Loading({ loading }) {
-  const [color, _setColor] = useState("#840032");
-
   const containerStyle = {
     display: "flex",
     justifyContent: "center",
@@ -13,7 +11,7 @@ function Loading({ loading }) {
 
   return (
     <div style={containerStyle}>
-      <SyncLoader color={color} loading={loading} size={24} />
+      <SyncLoader color="#840032" loading={loading} size={24} />
     </div>
   );
 }
