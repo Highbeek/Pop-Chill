@@ -43,6 +43,13 @@ h2 {
   align-items: "center";
 }
 
+.loading p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
 .movie-grid li {
   list-style: none;
   text-align: center;
@@ -92,6 +99,43 @@ h2 {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+
+.pagination {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination button {
+  background-color: var(--mainColor);
+  color: var(--textColor);
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-family: "Reem Kufi", sans-serif;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.pagination button:hover {
+  background-color: var(--secondaryColor);
+  color: var(--lighTextColor);
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  margin: 0 10px;
+  font-family: "Benne", serif;
+  font-size: 18px;
 }
 
 .movie-grid li.hover:hover .play-button-icon {
@@ -152,9 +196,8 @@ h2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     object-fit: contain;
-     margin-left: 20px;
+    margin-left: 20px;
     margin-right: 20px;
-    /* margin-left: 30px; */
   }
 
   h2 {
@@ -172,6 +215,5 @@ h2 {
     object-fit: cover;
     margin-left: 20px;
     margin-right: 20px;
-    /* margin-left: 30px; */
   }
 }

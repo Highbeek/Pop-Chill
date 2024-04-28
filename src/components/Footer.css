@@ -1,49 +1,104 @@
-.footer{
-    display: block;
-    margin-top: 20vh ;
-    padding: 30px 50px;
-    background-color:#eae2b7;
-    bottom: 0;
+/* Footer.css */
+
+.footer {
+  background-color: var(--secondaryColor);
+  color: var(--lighTextColor);
+  padding: 50px 20px;
+  font-family: "Benne", sans-serif;
 }
 
-.footer__links{
-    display: flex;
-    text-align: left;
-    justify-content: space-around;
-    gap: 10px;
-    margin-bottom: 50px;
-}
-.footer__links a{
-    text-decoration: none;
-    color: #e59500;
-    text-decoration: none;
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.footer__links > .a{
-    flex-basis: 50%;
-    padding-right:100px ;
-}
-.footer__links .b{
-    flex-basis: 25%;
+.footer__links__div {
+  flex: 1;
+  margin-bottom: 20px;
 }
 
-.footer__links .c{
-    flex-basis: 25%;
+.footer__links__div h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--textHeader);
 }
 
-.footer__links h4{
-    color:  #f77f00;
+.footer__links__div a {
+  color: var(--lighTextColor);
+  text-decoration: none;
 }
 
-.icons{
-    display: flex;
+.footer__links__div p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.footer__links__div ul {
+  list-style-type: none;
+}
+
+.footer__links__div ul li {
+  margin-bottom: 5px;
+}
+
+.footer__social {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__social h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--textHeader);
+}
+
+.footer__social .icons {
+  color: var(--lighTextColor);
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.footer__below {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.footer__copyright p {
+  font-size: 0.9rem;
+}
+
+.app-name {
+  font-size: 8rem;
+  color: var(--textColor);
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__links {
     flex-direction: column;
-    justify-content: space-between;
-}
-li{
-    list-style: none;
-}
+    align-items: center;
+  }
 
-.footer__links a:hover{
-    color: #840032;
+  .footer__links__div {
+    flex: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .footer__social {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .footer__social h4 {
+    margin-right: 10px;
+  }
+
+  .footer__social .icons {
+    margin-right: 10px;
+  }
 }

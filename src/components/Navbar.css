@@ -1,7 +1,3 @@
-.link {
-  color: #e59500;
-}
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -15,8 +11,13 @@
   position: fixed;
   width: 100%;
   top: 0px;
-  background: #eae2b7;
+  background: var(--secondaryColor);
   z-index: 9999;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar > a.link:first-child {
+  font-size: 32px; 
 }
 
 a.link {
@@ -36,30 +37,31 @@ a.link {
 
 a.link.active {
   position: relative;
-  font-style: italic; 
+  font-style: italic;
   color: #840032;
 }
 
-/* a.link.active::after {
+a.link.active::after {
   content: "";
-  float: left;
   position: absolute;
-  bottom: 0;
+  bottom: -3px;
   left: 50%;
   transform: translateX(-50%);
-  width: 40%;
-  border-bottom: 2px solid #840032;
-  transition: all 0.5s ease-in-out;
-} */
+  width: 50%;
+  height: 3px;
+  background-color: #840032;
+}
 
 .navbar__links {
   width: 60%;
   display: flex;
   justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .menu-btn {
-  display: none; 
+  display: none;
   background: none;
   border: none;
   font-size: 28px;
@@ -68,46 +70,23 @@ a.link.active {
   margin-right: 20px;
 }
 
-@media screen and (max-width: 768px) {
-  .navbar {
-    animation-name: navbarAnimation;
-    animation-duration: 0.5s;
-    animation-fill-mode: both;
-  }
-  .navbar > a.link:first-child {
-  font-size: 22px;
-  font-weight: bold;
-  font-family: "Oldenburg", cursive;
-  width: 30%;
-  float: left;
+.navbar > a.link:first-child {
+  font-size: 24px; 
 }
 
-  @keyframes navbarAnimation {
-    from {
-      transform: translateY(-100%);
-    }
-    to {
-      transform: translateY(0);
-    }
-  }
-  a.link {
-    font-size: 18px;
-  }
+@media screen and (max-width: 768px) {
   .navbar {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
+    height: auto;
   }
 
-  .menu-btn {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 28px;
-    cursor: pointer;
-    color: var(--textColor);
-    margin-right: 20px;
+  .icon {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 24px;
   }
 
   .navbar__links {
@@ -117,31 +96,21 @@ a.link.active {
     left: 0;
     width: 100%;
     padding: 10px;
-    background-color: #eae2b7;
+    background-color: var(--secondaryColor);
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
     z-index: 9999;
-    animation-name: navbarLinksAnimation;
-    animation-duration: 0.5s;
-    animation-fill-mode: both;
-    display: none;
   }
 
   .navbar__links.show-menu {
-    display: block;
-  }
-  @keyframes navbarLinksAnimation {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .navbar__links .link {
     display: block;
     margin-bottom: 10px;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 600;
     text-align: center;
     text-decoration: none;
@@ -149,26 +118,14 @@ a.link.active {
   }
 
   .menu-btn {
-    display: block; 
-  }
-
-  a.link {
-    font-size: 8px;
-  }
-
-  a.link.active {
-    font-style: italic;
+    display: block;
   }
 
   a.link.active::after {
-    content: "";
-    float: left;
-    position: absolute;
-    bottom: 0;
-    left: 30%;
-    transform: translateX(-50%);
-    width: 50%;
-    border: none;
-    transition: all 0.5s ease-in-out;
+    display: none;
+  }
+
+  .navbar > a.link:first-child {
+    font-size: 24px;
   }
 }

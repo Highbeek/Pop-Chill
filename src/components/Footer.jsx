@@ -8,39 +8,39 @@ const Footer = () => {
     <div className="footer">
       <div className="footer__links">
         <div className="footer__links__div a">
-          <a href="/movies">
-            <h4>Pop & Chill</h4>
+          <a href="/movies" className="app-name">
+            Pop & Chill
           </a>
           <p>
-            Pop & chill is a free streaming Trailer site , where you can watch
-            movies best movie trailers  for free.
-            Pop&Chill.cc Contact us Terms of service
+            Pop & chill is a free streaming Trailer site, where you can watch
+            the best movie trailers for free. Pop&Chill.cc Contact us Terms of
+            service
           </p>
         </div>
 
         <div className="footer__links__div b">
           <h4>Movie</h4>
           <ul>
-            <Link to="./action">
-              <li>Action</li>
-            </Link>
-            <Link to="./comedy">
-              <li>Comedy</li>
-            </Link>
-            <Link to="./romance">
-              <li>Romance</li>
-            </Link>
-            <Link to="./anime">
-              <li>Anime</li>
-            </Link>
-            <Link to="./tvseries">
-              <li>Tvseries</li>
-            </Link>
+            <li>
+              <Link to="./action">Action</Link>
+            </li>
+            <li>
+              <Link to="./comedy">Comedy</Link>
+            </li>
+            <li>
+              <Link to="./romance">Romance</Link>
+            </li>
+            <li>
+              <Link to="./anime">Anime</Link>
+            </li>
+            <li>
+              <Link to="./tvseries">Tvseries</Link>
+            </li>
           </ul>
         </div>
 
         <div className="footer__social c">
-          <h4>Pop & Chill</h4>
+          <h4>Follow Us</h4>
           <Link to="/" className="icons">
             <BsTwitter />
           </Link>

@@ -1,3 +1,5 @@
+/* Hero.css */
+
 .hero__header {
   margin-top: 100px;
 }
@@ -8,6 +10,7 @@
   width: 100%;
   padding: 0;
   margin: 0;
+  aspect-ratio: 1;
 }
 
 .hero__poster {
@@ -50,10 +53,9 @@
     text-align: center;
     color: #e59500;
     z-index: 1;
+    display: none;
   }
   .hero__head h1 {
-    color: #f77f00;
-    font-size: 3rem;
-    left: 0;
+    display: none;
   }
 }

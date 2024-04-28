@@ -9,7 +9,7 @@ const Romance = () => {
       <Hero
         imageSrc="https://hips.hearstapps.com/hmg-prod/images/lead-image-book-template-01-1-1671639058.jpg?resize=1200:*"
         heading="Pop & Chill"
-        description="Welcome to the Romance Movies section! If you're in the mood for love, then you're in the right place. We have a wide selection of heartwarming films that will make you swoon, laugh, and cry. Whether you're in the mood for classic romances, steamy love stories, or quirky indie films, we've got you covered. So snuggle up with your loved one, grab some tissues, and get ready for a rollercoaster of emotions. Check out our selection of romance movies below and let the romance begin!"
+        description="Welcome to the Romance Movies section! Get ready to be swept off your feet with our enchanting selection of trailers. Whether you're in the mood for classic romances, steamy love stories, or charming indie films, we've got just the preview to make your heart flutter. So, cozy up with your loved one, grab some tissues, and embark on a journey of love and emotion. Explore our romance movie trailers below and let the romance unfold!"
       />
       <h2>Romance movies</h2>
 

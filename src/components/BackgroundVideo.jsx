@@ -12,7 +12,6 @@ const BackgroundVideo = () => {
         `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&type=video&q=action+movie+trailer&videoEmbeddable=true&key=AIzaSyD9P2eUPFSaOkvG-YcV7Q7BTot3o-UYKeI`
       );
       const data = await response.json();
-      console.log("FETCHED VIDEOS========>", data);
       if (data.items) {
         const ids = data.items.map((item) => item.id.videoId);
         setVideoIds(ids);
@@ -25,7 +24,6 @@ const BackgroundVideo = () => {
   const handleVideoEnd = () => {
     setVideoIndex((prevIndex) => (prevIndex + 1) % videoIds.length);
   };
-  console.log("VIDEOS SHOWN", videoIds.length);
 
   return (
     <section className="hero">
@@ -53,14 +51,18 @@ const BackgroundVideo = () => {
           />
         )}
       </div>
-      <div className="home__hero">
+      <div
+        className="home__hero"
+        data-aos="fade-up"
+        data-aos-easing="ease-in-out"
+      >
         <h1> Pop & Chill</h1>
         <p>
-          Welcome to Pop & Chill Official Website, your no. 1 stop for the
-          latest and greatest movies online for free. Discover a wide selection
-          of recently released films, from blockbuster action to award-winning
-          dramas and indie gems. Stay up-to-date with the latest trends and find
-          your new favorite film here!
+          Welcome to Pop & Chill Website, your number one stop for the latest
+          and greatest movie trailers online, all available for free. Discover a
+          wide selection of recently released trailers, from blockbuster action
+          to award-winning dramas and indie gems. Stay up-to-date with the
+          latest trends and find exciting previews of upcoming films here!
         </p>
       </div>
     </section>
