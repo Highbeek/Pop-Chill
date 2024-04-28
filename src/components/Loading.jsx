@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SyncLoader from "react-spinners/SyncLoader";
 
 function Loading({ loading }) {
-  const [color, setColor] = useState("#840032");
+  const [color, _setColor] = useState("#840032");
 
   const containerStyle = {
     display: "flex",
